@@ -1,0 +1,23 @@
+#Default Terminal 
+
+conda deactivate 
+conda create -p venv python==3.10  
+conda activate venv/   
+pip install -r requirements.txt 
+pip install openai #incase openai error
+
+#install and download Ollama 
+
+ollama pull gemma3
+pip install ollama
+ollama launch
+ollama launch claude --model gemma3
+
+#Open New Terminal 
+ 
+conda deactivate
+ conda activate venv/  
+ setx OPENAI_API_KEY "API KEY"
+ streamlit run localama.py     
+
+ 
